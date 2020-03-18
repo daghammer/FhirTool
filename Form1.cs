@@ -36,7 +36,14 @@ namespace FhirTool
             sfmClient.PreferredFormat = ResourceFormat.Json;
 
             // var task = sfmClient.Read<Task>("http://hapi.fhir.org/baseR4/Task/642258");
-            var task = sfmClient.Read<Task>(ResourceIdentity.Build("Task", "642258"));
+            SfmTask sTask = new SfmTask();
+
+            Task t = (Task)sTask;
+
+             
+
+            var task =  sfmClient.Read<Task>(ResourceIdentity.Build("Task", "642258"));
+
             if ( task != null )
             {
                 textBox1.Text += "Task: " + task.Id + Environment.NewLine;

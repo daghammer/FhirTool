@@ -119,6 +119,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SfmExtReseptamendment.cs" />
     <Compile Include="SfmMedicationStatement.cs" />
+    <Compile Include="SfmPatient.cs" />
+    <Compile Include="SfmPerson.cs" />
+    <Compile Include="SfmPractitioner.cs" />
+    <Compile Include="SfmTask.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
