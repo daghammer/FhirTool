@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using Hl7.Fhir.Rest;
 using Hl7.Fhir.Model;
 
+using Hl7.Fhir.Serialization;
+
+
 using SfmFhir;
 
 namespace FhirTool
@@ -92,6 +95,15 @@ namespace FhirTool
             // SfmMedicationStatement sfmMS = new SfmMedicationStatement();
             // sfmMS.ReseptID = Guid.NewGuid().ToString();
             // String rID = sfmMS.ReseptID;
+        }
+
+        private void btnPatient_Click(object sender, EventArgs e)
+        {
+            SfmPatient p = new SfmPatient("Dag", "Hammer");
+           
+            p.middlename = "Severin";
+            p.FNR = "11111100099";
+            textBox1.Text = p.patient.ToJson(new FhirJsonSerializationSettings() { Pretty = true, AppendNewLine = true }); 
         }
     }
 }
